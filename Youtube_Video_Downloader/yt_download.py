@@ -1,12 +1,11 @@
 from pytube import YouTube
 from sys import argv
 
-link = argv[1]
-yt = YouTube(link)
+url = ''
+my_video = YouTube(url)
 
-print("Title: ",yt.title)
-print("Views: ",yt.views)
+print(my_video.title)
 
-yd = yt.streams.get_highest_resolution()
+my_video = my_video.streams.get_highest_resolution()
 
-yd.download('/Users/Jigu/Documents/meet/project clg/python/Youtube_Video_Downloader')
+my_video.download('/Users/Jigu/Documents/GitHub/PythonLearning/Youtube_Video_Downloader')
